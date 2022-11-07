@@ -1,0 +1,78 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-size: cover;
+  background-image: url("hand.gif");
+}
+
+
+.topnav {
+  background-color: orangered;
+  overflow: hidden;
+  height: 9vh;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Pacifico', cursive;
+  color: white;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: white;
+  text-align: center;
+  text-align: center;
+  justify-content: center;
+  padding: 17px 20px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:white;
+  color: Black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+ span{
+
+  float: left;
+  font-size: 40px;
+  color: white;
+ }
+
+.title{
+
+  text-align: center;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  background-color: black;
+}
+
+.intor{
+
+  margin: 25px;
+}
+
+ .container{
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 170px;
+  text-align: center;
+  padding: 30px;
+ }
+
+ .content{
+
+  font-size: 25px;
+  font-family: 'Pacifico', cursive;
+  justify-content: center;
+  text-align: center;
+  color: black;
+ }
