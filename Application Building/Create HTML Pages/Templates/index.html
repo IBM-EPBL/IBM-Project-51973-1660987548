@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Sterile-Image</title>
+        <style>
+            body {
+                  margin: 0px;
+                  background-image: url("dot.jpg");
+                  background-size: cover;
+                  padding: 0px;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                }
+                .btn{
+                      width: 190px;
+                      height: 44px;
+                      position: relative;
+                      top:450px;
+                      left:585px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      color: white;
+                      background-color: #1db096;
+                      border-radius: 10px;
+                      box-shadow: 5px 10px 30px rgba(24,139,119,0.2);
+                    }
+                .btn:hover{
+                      background-color: #23cdaf;
+                      transition: all ease 0.2s;
+                      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                  }
+
+            .img{
+                height:250px;
+                width:250px;
+                border: 2px solid #dddddd;
+                margin-top:15px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+            .heading{
+                  position: relative;
+                  top:60px;
+                  white-space: nowrap;
+                  right:645px;
+                  color: white;
+                  position: absolute;
+                  transform: translate(50%,-50%);
+                  text-transform: uppercase;
+                  font-family: verdana;
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: #454545;
+                  text-shadow: 1px 1px 1px #919191,
+                      1px 2px 1px #919191,
+                      1px 3px 1px #919191,
+                      1px 4px 1px #919191,
+                      1px 5px 1px #919191,
+                      1px 6px 1px #919191,
+                      1px 7px 1px #919191,
+                      1px 8px 1px #919191,
+                      1px 9px 1px #919191,
+                      1px 10px 1px #919191,
+                  1px 18px 6px rgba(16,16,16,0.4),
+                  1px 22px 10px rgba(16,16,16,0.2),
+                  1px 25px 35px rgba(16,16,16,0.2),
+                  1px 30px 60px rgba(16,16,16,0.4);
+              }
+              .form-control{
+                  position: relative;
+                  font-size:14px;
+                  background: white;
+                  border-radius: 10px;
+                  box-shadow: 5px 5px 10px black;
+                  width:252px;
+                  height: 35px;
+                  top:420px;
+                  left:553px;
+               }
+              ::-webkit-file-upload-button{
+                color: white;
+                background: #206a5d;
+                padding:11px;
+                border-radius: 10px;
+                border: none;
+                box-shadow: 1px 0 1px 1px #6b4559;
+                outline: none;
+              }
+              ::-webkit-file-upload-button:hover{
+                background: #438a5e;
+              }
+        </style>
+    </head>
+    <body>
+        <div class="col-md-offset-3 col-md-5" style="margin-top:50px" >
+            <form action="/process" method="post" enctype="multipart/form-data">
+                <div class=heading><h1>A GESTURE BASED TOOL FOR STERILE BROWSING</h1></div>
+                <div class="form-group">
+                    <input type="file" class="form-control"  id="upload_image" name="upload_image">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Capture Video" name="upload_image">
+                </div>
+                <div class="form-group">
+                    <center><img id="display_image" class="img img-thumbnail" ></center>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<script>
+    const image_input = document.querySelector("#upload_image");
+    image_input.addEventListener("change", function() {
+       const reader = new FileReader();
+       reader.addEventListener("load", () => {
+       const uploaded_image = reader.result;
+       document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+    });
+       reader.readAsDataURL(this.files[0]);
+    });
+</script>
