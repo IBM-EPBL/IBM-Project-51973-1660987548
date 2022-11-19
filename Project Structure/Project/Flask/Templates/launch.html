@@ -1,0 +1,318 @@
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=0.6">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <meta charset="UTF-8">
+      <title>Predict</title>
+      <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+   
+      <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <link href="C:\Users\sneha\Desktop\Project\Project Development Phase\Sprint 3\Application Building\Flask\static\CSS\main.css" rel="stylesheet">           
+  <style>
+  .bar
+  {
+  margin: 0px;
+  padding:20px;
+  background-color:black;
+  opacity:0.6;
+  color:black;
+  font-family:'Roboto',sans-serif;
+  font-style: italic;
+  border-radius:20px;
+  font-size:25px;
+  }
+  a
+  {
+  color:black;
+  float:right;
+  text-decoration:none;
+  font-style:normal;
+  padding-right:20px;
+  }
+  a:hover{
+  background-color:black;
+  color:black;
+  font-size:30px;
+  padding-left:10px;
+  }
+  
+  div1{
+    text-align: center;
+    width: 650spx;
+    height: 800px;
+    padding: 190px;
+    margin: 10px;
+    position: absolute;
+  }
+  
+  
+
+  body
+  {
+      background-image: url("hand.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  
+  .header {	position: relative;
+        top:0;	
+        margin:0px;
+        z-index: 1;
+        left: 0px;
+        right: 0px;
+        position: fixed;
+        background-color: rgb(10, 102, 109) ;
+        color: black;
+        box-shadow: 0px 8px 4px grey;
+        overflow: hidden;
+        padding-left:20px;
+        font-family: 'Josefin Sans';
+        font-size: 2vw;
+        width: 100%;
+        height:8%;
+        text-align: center;
+      }
+      .topnav {
+    overflow: hidden;
+    background-color: orangered;
+  }
+  
+  .topnav-right a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .topnav-right a.active {
+    background-color: #07201e;
+    color: rgb(238, 226, 234);
+  }
+
+  .topnav-right a:hover {
+    background-color: rgb(181, 228, 236);
+    color: rgb(6, 27, 36);
+  }
+  
+  
+  
+  .topnav-right {
+    float: right;
+    padding-right:100px;
+  }
+  
+  
+  .button {
+  background-color: #091425; 
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 16px;
+  }
+  .button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  form {border: 2px solid black; margin-left:400px;margin-right:400px;}
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    margin-bottom:18px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #091425;
+    color: black;
+    padding: 14px 20px;
+    margin-bottom:10px;
+    border: none;
+    cursor: pointer;
+    width: 17%;
+    border-radius:4px;
+    font-family:Montserrat;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 30%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  
+  .home{
+    margin:80px;
+    
+    width: 84%;
+    height: 500px;
+    padding-top:10px;
+    padding-left: 30px;  
+    
+  }
+  .login{
+    margin:80px;
+    box-sizing: content-box;  
+    width: 84%;
+    height: 420px;
+    padding: 30px;  
+    border: 10px solid rgb(12, 91, 94);
+  }
+  .left,.right{
+   box-sizing: content-box; 
+   height: 400px;
+   margin:20px;
+   border: 10px solid rgb(12, 91, 94);
+  }
+  
+  .mySlides {display: none;}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #267481;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  
+  </style> 
+  </head>
+  
+  <body>
+  <div class="header">    
+  <div style="width:50%;float:left;font-size:2vw;text-align:left;color:#c1e2d9; padding-top:1%;padding-left:5%;">Hand Gesture System</div>
+    <div class="topnav-right"style="padding-top:0.5%;">
+      
+      <a href="home.html">Home</a>
+      <a href="intro.html">Introduction</a>
+      <a class="active" href="launch.html"><u>Launch</u></a>
+    </div>
+  </div>
+  <br>
+  
+    <div1 style=""><h1><font color="Black" size="6" font-family="Roboto">Hand Gesture Recognition</h1><br>
+    <p><i><font color="Black" size="4" fonr-family="sans-serif"></i>Provide an image for which you want to perform various operations</p>
+    <br>
+          <div>
+            <h4>Upload Image Here</h4>
+        <form action = "http://localhost:5000/" id="upload-file" method="post" enctype="multipart/form-data">
+          <label for="imageUpload" class="upload-label">
+            Choose...
+          </label>
+          <input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg,.pdf">
+        </form>
+        <center>
+          <div class="image-section" style="display:none;">
+          <div class="img-preview">
+          <div id="imagePreview">
+          </div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-info btn-lg " id="btn-predict">Predict!</button>
+          </div>
+          </div>
+          <div class="loader" style="display:none;"></div>
+        </center>
+      </div>
+      </div1>
+         
+          <footer>
+      <script src="C:\Users\sneha\Desktop\Project\Project Development Phase\Sprint 3\Application Building\static\js\main.js" type="text/javascript"></script>    
+  </footer>
+          
+  </html>    
