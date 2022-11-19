@@ -1,0 +1,108 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-size: cover;
+  background-image: url("hand.gif");
+}
+
+
+.topnav {
+  background-color: orangered;
+  overflow: hidden;
+  height: 9vh;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Pacifico', cursive;
+  color: white;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: white;
+  text-align: center;
+  text-align: center;
+  justify-content: center;
+  padding: 17px 20px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:white;
+  color: Black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: black;
+}
+span{
+  text-align: center;
+  padding: 14px;
+  font-weight: bolder;
+  float: left;
+  font-size: 28px;
+  font-family: 'Pacifico', cursive;
+  color: white;
+}
+.gesture{
+
+  width: 70vh;
+  height: 55vh;
+  color: black;
+  font-size: 35px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 25px;
+  margin-right: 25px;
+  /*background-color: whitesmoke;*/
+
+}
+
+
+.frame{
+
+  float: left;
+  width: 450px;
+  height: 250px;
+  margin-left: 350px;
+  box-shadow: 0,1,2,1;
+  margin-top: 25px;
+  text-align: center;
+
+}
+
+.demo{
+
+    color: black;
+    font-family: "sans-serif;";
+    font-size: 25px;
+    font-weight: bolder;
+
+}
+
+.box{
+
+   display: flex;
+  flex-direction: row;
+  padding: 30px;
+  /*background-color: greenyellow;*/
+  align-items: center;
+  height: 50vh;
+}
+
+.last{
+
+  padding: 15px;
+  color: white;
+  background-color: orangered;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+}
